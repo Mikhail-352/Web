@@ -1,0 +1,178 @@
+$blue: #3498db
+
+.noselect
+    -webkit-touch-callout: none // iOS Safari
+    -webkit-user-select: none   // iSafari 
+    -khtml-user-select: none    // Konqueror HTML 
+    -moz-user-select: none      // Old versions of Firefox 
+    -ms-user-select: none       // Internet Explorer/Edge 
+    user-select: none           // Non-prefixed version, currently
+                                //   supported by Chrome, Edge, Opera and Firefox 
+
+@keyframes appearance 
+    0% 
+        opacity: 0
+    100% 
+        opacity: 1
+
+@keyframes pulse 
+    0% 
+      opacity: 1
+    100% 
+      opacity: 0.85
+
+*,
+:after,
+:before
+  box-sizing: border-box
+
+html
+    margin: 0
+    padding: 0
+    height: 100vh
+    font-family: Montserrat
+    color-scheme: dark !important
+body
+    margin: 0
+    padding: 0
+
+.main
+    height: 100vh
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    font-family: Montserrat
+    background: linear-gradient(to left, rgba(19, 35, 180, 0.49), rgba(21, 29, 137, 0.47), rgba(118, 20, 163, 0.52), rgba(113, 22, 131, 0.53))
+
+// Index page
+.index-page
+    .content
+        display: flex
+        flex-direction: column
+        align-items: center
+    .page
+        background-color: #888888
+        box-shadow: 0 0 20px rgba(0, 0, 0, .5)
+        border-radius: 15px
+        padding: 20px 50px
+        margin: 20px
+        a
+            text-decoration: none
+            color: #ffffff
+            font-size: 40px
+
+// Calc page
+.calc-page
+    .screen
+        box-sizing: border-box
+        box-shadow: 0 0 10px 0 $blue inset, 0 0 10px 4px $blue
+        background: #00000050
+        color: #ffffff
+        width: 100%
+        height: clamp(50px, 8vh, 8vh)
+        border-radius: 100vh
+        margin-bottom: 20px
+        display: flex
+        align-items: center
+        justify-content: right
+        padding-right: 20px
+        font-size: 24px
+        font-weight: 500
+
+    .buttons
+        display: grid
+        grid-template-columns: 5fr 3fr
+        .digits
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+            grid-template-rows: repeat(3, 1fr)
+            justify-content: center
+        .other
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            grid-template-rows: repeat(4, 1fr)
+            justify-content: center
+            align-items: center
+        .key
+            border: none
+            box-sizing: border-box
+            appearance: none
+            background-color: transparent
+            border-radius: 100vh
+            cursor: pointer
+            display: flex
+            align-self: center
+            font-size: 36px
+            margin: 15px 10px
+            padding: 16px 32px
+            text-decoration: none
+            text-align: center
+            text-transform: uppercase
+            font-family: 'Montserrat', sans-serif
+            font-weight: 500
+            border-color: $blue
+            color: #fff
+            box-shadow: 0 0 40px 40px $blue inset, 0 0 0 0 $blue
+            transition: all 150ms ease-in-out
+            width: clamp(50px, 10vh, 10vh)
+            height: clamp(50px, 10vh, 10vh)
+            justify-content: center
+            align-items: center
+            &:hover
+                // color: #000
+                box-shadow: 0 0 10px 0 $blue inset, 0 0 10px 4px $blue
+
+// Tic-tac-toe page
+.tic-tac-toe-page
+    .tic-tac-toe-container
+        display: flex
+        flex-direction: column
+        .win-status
+            color: #fff
+            font-size: clamp(24px, 4vh, 4vh)
+            display: flex
+            justify-content: center
+            align-items: center
+            margin-bottom: clamp(15px, 3vh, 3vh)
+            font-weight: 500
+            height: clamp(24px, 4vh, 4vh)
+        .field
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+            grid-template-rows: repeat(3, 1fr)
+            .cell
+                width: clamp(100px, 20vh, 30vh)
+                height: clamp(100px, 20vh, 30vh)
+                background-color: transparent
+                margin: clamp(10px, 1vh, 1vh)
+                box-shadow: 0 0 10px 0 $blue inset, 0 0 10px 4px $blue
+                background: #00000050
+                border-radius: 3vh
+                color: #fff
+                font-size: clamp(85px, 17vh, 17vh)
+                display: flex
+                justify-content: center
+                align-items: center
+                &:hover
+                    animation: pulse ease-in-out 0.8s infinite alternate
+            .win-cell
+                color: #15ff00
+            .lose-cell
+                color: #ff0000
+            .letter
+                animation: appearance 0.2s ease-in-out
+        .reset
+            background-color: #888
+            color: #fff
+            height: clamp(30px, 7vh, 7vh)
+            font-size: clamp(24px, 4vh, 4vh)
+            display: flex
+            justify-content: center
+            align-items: center
+            box-shadow: 0 0 20px rgba(0, 0, 0, .5)
+            border-radius: clamp(9px, 2vh, 2vh)
+            margin-top: clamp(15px, 3vh, 3vh)
+            &:hover
+                animation: pulse ease-in-out 0.8s infinite alternate
+                    
