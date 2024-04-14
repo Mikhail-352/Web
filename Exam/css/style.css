@@ -1,0 +1,86 @@
+/* Серый: с цветом фуксии, красным, фиолетовым, розовым, синим. */
+
+::selection {
+    background: #FFC0CB; /* Розовый */
+    color: #fff;
+}
+
+.page-link{
+    color: #FFC0CB; /* Розовый */
+    position: relative;
+    display: block;
+    padding: var(--bs-pagination-padding-y) var(--bs-pagination-padding-x);
+    font-size: var(--bs-pagination-font-size);
+    text-decoration: none;
+    border: var(--bs-pagination-border-width) solid var(--bs-pagination-border-color);
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.title-time-model{
+    font-size: 16px;
+}
+
+.page-link:hover{
+    z-index: 2;
+    color: #C0C0C0;             /* Серый */
+    border-color: #808080;      /* Серый */
+    background-color: #800080;  /* Фиолетовый */
+}
+
+.page-link:focus{
+    color:#808080; /* Серый */
+}
+
+.page-link:focus-visible{
+    border-color: #C0C0C0; /* Серый */
+}
+
+.btn{
+    color: #FFC0CB;         /* Розовый */
+    border-color: #FFC0CB;  /* Розовый */
+}
+
+.btn:hover{
+    color: #C0C0C0;         /* Серый */
+    border-color: #808080;  /* Серый */
+    background-color: #800080; /* Фиолетовый */
+}
+
+.input-group{
+    width: 100%;
+    height: 26px;
+}
+
+/* footer */
+.payment-option {
+    flex: 1;
+}
+
+.payment-options {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    list-style-type: none;
+}
+
+
+.payment-options li {
+    margin: 0;
+}
+
+.socialnet a{
+    color: #FFC0CB; /* Розовый */
+    text-decoration: none;
+}
+
+.container h3{
+    color: #FFC0CB; /* Розовый */
+}
+
+.container p{
+    color: #FFC0CB; /* Розовый */
+}
+
+.containerfooter {
+    text-align: center;
+}
